@@ -10,6 +10,10 @@ body {
     background-color: rgb(218, 234, 250);
 }
 
+.sources {
+    padding: 100px;
+}
+
 nav {
     position: fixed;
     top: 0;

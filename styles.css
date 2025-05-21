@@ -1,0 +1,366 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(218, 234, 250);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 45px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(155, 172, 244);
+    z-index: 11;
+}
+
+nav a {
+    color: rgb(5, 15, 105);
+    text-decoration: none;
+    border: 1px solid rgb(43, 0, 255);
+    padding: 10px;
+    background-color: rgb(199, 224, 245);
+    flex: 1;
+    text-align: center;
+    z-index: 10;
+}
+
+#main-body {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: x-large;
+    padding-left: 5px;
+}
+
+aside span {}
+
+main {
+    flex: 5;
+    height: 85vh;
+}
+
+.hero-img {
+    height: 200px;
+    opacity: 0.8;
+    object-fit: cover;
+    width: 100vw;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(82, 79, 79);
+    z-index: 10;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    z-index: 11;
+}
+
+.main-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 5px;
+}
+
+.main-body-container {
+    padding: 10px 7vw;
+}
+
+.cta-buttons {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 2 equal columns */
+    grid-template-rows: auto auto auto;
+    /* 3 rows */
+    gap: 10px;
+    height: 50vh;
+}
+
+.final-grid {
+    grid-column: 1 / span 2;
+    /* Span across both columns */
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    display: flex;
+    /* CSS3 */
+    align-items: center;
+    /* Vertical align */
+    justify-content: center;
+    /* Horizontal align */
+}
+
+
+/* ****************** */
+/* Image Overlay Start*/
+/* ****************** */
+.img-container {
+    position: relative;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background-color: #008CBA;
+    opacity: 0.4;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+}
+
+.img-container:hover .overlay {
+    width: 100%;
+    left: 0;
+}
+
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/* ****************** */
+/* Image Over End */
+/* ****************** */
+
+/* Food */
+
+.food-header {
+    text-align: center;
+}
+
+.food-main {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 200px;
+}
+
+.food-rest {
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+    position: relative;
+    margin-bottom: 10px;
+    ;
+    height: 50vh;
+    align-items: center;
+    overflow: scroll;
+}
+
+.food-title {
+    font-size: 75px;
+    position: absolute;
+    transform: rotate(-270deg);
+    height: 100px;
+}
+
+.food-title1 {
+    right: -70px;
+}
+
+.food-title2 {
+    right: -120px;
+}
+
+.food-content {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px;
+}
+
+.food-card {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    min-height: 100px;
+    max-width: 90%;
+}
+
+.food-img {
+    margin-left: 10px;
+}
+
+
+/* End Food */
+
+
+/* Activities */
+
+.activity-main {
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.activity-title1 {
+    right: -90px;
+}
+
+
+.activity-title2 {
+    right: -75px;
+}
+
+.activity-title3 {
+    right: -120px;
+}
+
+
+.activity-title {
+    font-size: 40px;
+    position: absolute;
+    transform: rotate(-270deg);
+}
+
+/* End Activities */
+
+/* Lodging */
+
+.lodge-rest {
+    display: flex;
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+    ;
+    height: 50vh;
+    align-items: center;
+}
+
+/* End Lodging */
+
+
+/* Transportation */
+
+.tr-det {
+    display: flex;
+    width: 75%;
+    border: 1px solid black;
+    position: relative;
+    margin-bottom: 10px;
+    ;
+    height: 20vh;
+    align-items: center;
+    justify-content: center;
+    overflow: scroll;
+}
+
+.tr-det-parent {
+    display: flex;
+    justify-content: center;
+}
+
+.tr-title2 {
+    right: -60px;
+}
+
+/* End Transportation */
+
+/* FAQ */
+.faq-rest {
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+    position: relative;
+    margin-bottom: 10px;
+    ;
+    align-items: center;
+    border: 1px solid black;
+    justify-content: center;
+}
+
+.faq-content {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    margin: 10px;
+    align-items: center;
+    width: 100%;
+}
+
+.faq-card {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 100px;
+}
+
+.faq-title {
+    font-size: 40px;
+}
+
+.faq-q {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#faq-main-body {
+    margin-top: 45px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 200px;
+}
+
+/* FAQ end */
